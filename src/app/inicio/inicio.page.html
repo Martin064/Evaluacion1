@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> <!-- Botón para abrir el menú -->
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bienvenido, {{ username }}</ion-card-title> 
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Opciones</ion-label>
+        </ion-list-header>
+
+        
+        <ion-item>
+          <ion-button expand="full" [routerLink]="['/asignaturas']">Mis Asignaturas</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button expand="full" [routerLink]="['/asistencias']">Mis Asistencias</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button expand="full" [routerLink]="['/registrar-asistencia']">Registrar Asistencia</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button expand="full" [routerLink]="['/cambiar-clave']">Cambiar Clave</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button expand="full" [routerLink]="['/login']" color="danger">Cerrar Sesión</ion-button>
+        </ion-item>
+        
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
