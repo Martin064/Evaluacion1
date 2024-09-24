@@ -12,15 +12,22 @@ export class CambiarClavePage implements OnInit {
 
   constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loadUserInfo();
+  }
+  loadUserInfo() {
+    console.log('Información del usuario cargada.');
+  }
 
   changePassword() {
     if (this.currentPassword && this.newPassword) {
-      // Aquí podrías agregar la lógica para cambiar la contraseña en tu backend
+ 
       alert('Clave cambiada exitosamente.');
-      this.navCtrl.navigateBack('login'); // Volver a la página de inicio
+      this.navCtrl.navigateBack('inicio'); 
     } else {
       alert('Por favor, completa todos los campos.');
     }
   }
 }
+
+
