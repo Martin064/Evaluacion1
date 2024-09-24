@@ -6,9 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
-  username: string = 'Usuario1'; // Usuario temporal
+  username: string = 'Usuario1'; 
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.logUsername();
+  }
+
+  logUsername() {
+    console.log(`El usuario actual es: ${this.username}`);
+  }
 }
