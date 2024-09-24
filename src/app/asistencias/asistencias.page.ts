@@ -8,14 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class AsistenciasPage implements OnInit {
 
   asistencias = [
-    { asignatura: 'Bases de datos', fecha: '2024-09-01', presente: true },
-    { asignatura: 'Matematica', fecha: '2024-09-02', presente: false },
-    { asignatura: 'Programación', fecha: '2024-09-03', presente: true },
-    { asignatura: 'Ingles ', fecha: '2024-09-03', presente: false }
+    { asignatura: 'Bases de datos', fecha: '2024-09-01' ,Seccion:'006d', presente: true },
+    { asignatura: 'Matemática', fecha: '2024-09-02', Seccion:'004d', presente: false },
+    { asignatura: 'Programación', fecha: '2024-09-03',Seccion:'003d', presente: true },
+    { asignatura: 'Inglés', fecha: '2024-09-03', Seccion:'009d',presente: false }
   ];  
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.loadAsistencias();
+  }
 
+  loadAsistencias() {
+    console.log('Asistencias cargadas:', this.asistencias);
+  }
 }
