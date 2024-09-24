@@ -7,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsignaturasPage implements OnInit {
 
-  asignaturas: string[] = ['Programacion de aplicaciones moviles', 'Bases de datos', 'Matemetica Aplicada' , 'Ingles intermedio 2']; 
+  asignaturas: string[] = [
+    'Programación de aplicaciones móviles',
+    'Bases de datos',
+    'Matemática Aplicada',
+    'Inglés intermedio 2'
+  ];
 
   constructor() { }
 
-  ngOnInit() { }
-
+  ngOnInit() {
+    this.loadAsignaturas();
+  }
+  loadAsignaturas() {
+    console.log('Asignaturas cargadas:', this.asignaturas);
+  }
 }
