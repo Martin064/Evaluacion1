@@ -8,13 +8,20 @@ import { AlertController, NavController } from '@ionic/angular';
 })
 export class RegistrarAsistenciaPage implements OnInit {
   codigoQR: string = 'assets/qr-placeholder.png'; 
+  mostrarQR: boolean = false; 
 
   constructor(private alertCtrl: AlertController, private navCtrl: NavController) { }
 
   ngOnInit() {
+    this.loadQR();
+  }
+
+  loadQR() {
+    console.log('Código QR cargado (simulado).');
   }
 
   registrarAsistencia() {
+    this.mostrarQR = true; 
     console.log('Asistencia registrada');
     this.showAlert('Éxito', 'Tu asistencia ha sido registrada correctamente.');
   }
@@ -29,6 +36,6 @@ export class RegistrarAsistenciaPage implements OnInit {
   }
 
   volver() {
-    this.navCtrl.navigateBack('/inicio'); // Redirigir al menú principal
+    this.navCtrl.navigateBack('/inicio'); 
   }
 }
