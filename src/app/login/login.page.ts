@@ -12,7 +12,15 @@ export class LoginPage implements OnInit {
 
   constructor(private navCtrl: NavController, private alertCtrl: AlertController) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.loadUserInfo(); // Simular la carga de información del usuario
+  }
+
+  // Método para simular la carga de información del usuario
+  loadUserInfo() {
+    // Aquí podrías cargar la información del usuario desde un servicio
+    console.log('Información del usuario cargada (simulada).');
+  }
 
   onSubmit() {
     // Validar credenciales temporales
