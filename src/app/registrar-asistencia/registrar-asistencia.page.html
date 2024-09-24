@@ -1,26 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Registrar Asistencias</ion-title>
+    <ion-title>Registrar Asistencia</ion-title>
     <ion-buttons slot="end">
-      <ion-back-button defaultHref="inicio"></ion-back-button>
+      <ion-back-button defaultHref="/inicio"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Registrar Asistencia</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-item>
-        <ion-label>Código QR</ion-label>
-        <img src="" alt="Código QR" /> <!-- Imagen temporal -->
-      </ion-item>
+  <ion-button (click)="registrarAsistencia()">Registrar Asistencia</ion-button>
 
-      <ion-button expand="full" (click)="registrarAsistencia()">Registrar</ion-button>
-      <ion-button expand="full" (click)="volver()">Volver</ion-button>
-    </ion-card-content>
-  </ion-card>
+  <div *ngIf="mostrarQR">
+    <ion-img [src]="codigoQR"></ion-img>
+    <p>Escanea el código QR para registrar tu asistencia.</p>
+  </div>
+
+  <ion-button (click)="volver()">Volver</ion-button>
 </ion-content>
